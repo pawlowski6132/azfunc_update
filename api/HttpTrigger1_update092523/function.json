@@ -15,14 +15,13 @@
       "direction": "out",
       "name": "res"
     },
-    {
-      "type": "sql",
-      "direction": "out",
-      "name": "sqlOutput",
-      "connectionStringSetting": "<Azure_SQL_Connection_String>",
-      "tableName": "<Table_Name>",
-      "sqlQuery": "UPDATE <Table_Name> SET Name = {name} WHERE Id = {id}"
-
-    }
+  {
+    "type": "sql",
+    "direction": "out",
+    "name": "sqlOutput",
+    "connectionStringSetting": "SqlConnectionString",
+    "tableName": "dbo.ToDo",
+    "sqlQuery": "UPDATE dbo.ToDo SET completed = 'True' WHERE title = 'Adele'"
+  }
   ]
 }
